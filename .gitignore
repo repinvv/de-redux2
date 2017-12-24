@@ -3,3 +3,4 @@
 /gulp-tsc-tmp*
 .gulp-tsc-tmp*.*
 npm-debug.log*
+package-lock.json
