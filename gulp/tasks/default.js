@@ -1,3 +1,3 @@
-const gulp = require('gulp');
+const gulp = require("gulp");
 
-gulp.task('default', ['test']);
+gulp.task("default", ["test"]);

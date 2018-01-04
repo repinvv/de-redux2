@@ -1,8 +1,8 @@
-import { expect } from 'chai';
-import { basicFunction } from '../src';
+import { expect } from "chai";
+import { basicFunction } from "../src";
 
-describe('basic function', function (): void {
-  it('should return sum of two numbers', function (): void {
+describe("basic function", function (): void {
+  it("should return sum of two numbers", function (): void {
     // arrange
 
     // act

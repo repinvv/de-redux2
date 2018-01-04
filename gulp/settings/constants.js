@@ -1,7 +1,7 @@
 const constants = {
-  allTs: '/**/*.ts',
-  allJs: '/**/*.js',
-  allFiles: '/**/*.*'
+  allTs: "/**/*.ts",
+  allJs: "/**/*.js",
+  allFiles: "/**/*.*"
 }
 
 module.exports = constants;
