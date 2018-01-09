@@ -1,1 +1,1 @@
-export * from './basicFunction';
+export * from "./basicFunction";

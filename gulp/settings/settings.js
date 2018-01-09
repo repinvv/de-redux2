@@ -1,7 +1,7 @@
-const buildPath = './build';
+const buildPath = "./build";
 
-const src = 'src';
-const testSrc = 'testSrc';
+const src = "src";
+const testSrc = "testSrc";
 const settings = {
   srcPath: `./${src}`,
   testPath: `./${testSrc}`,

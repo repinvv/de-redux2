@@ -1,5 +1,5 @@
-const fse = require('fs-extra');
-const retry = require('./retryPromise');
+const fse = require("fs-extra");
+const retry = require("./retryPromise");
 
 async function removeDirRecursive(path) {
   const exists = await fse.pathExists(path);
