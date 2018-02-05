@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "update this",
   "files": [
-    "build/src"
+    "build/src",
+	"index.js",
+	"index.js.map",
+	"index.d.ts"
   ],
-  "main": "build/src/index.js",
+  "main": "index.js",
   "typings": "build/src/index",
   "scripts": {},
   "keywords": [],
