@@ -9,7 +9,7 @@
 	"index.d.ts"
   ],
   "main": "index.js",
-  "typings": "build/src/index",
+  "typings": "index",
   "scripts": {},
   "keywords": [],
   "author": "Vladimir Repin",
