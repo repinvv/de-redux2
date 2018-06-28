@@ -4,3 +4,5 @@
 .gulp-tsc-tmp*.*
 npm-debug.log*
 package-lock.json
+/coverage
+/.nyc*
