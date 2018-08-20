@@ -1,9 +1,9 @@
-import { parseFiles } from "../src/parseFiles/parseFiles";
+import { parseFiles } from "../../src/parseFiles/parseFiles";
 import { expect } from "chai";
-import { ParsedFile } from "../src/parseFiles/types/parsedFile.type";
-import { ParsedType } from "../src/parseFiles/types/parsedType.type";
-import { ParsedMethod } from "../src/parseFiles/types/parsedMethod.type";
-import { ParsedImport } from "../src/parseFiles/types/parsedImport.type";
+import { ParsedFile } from "../../src/parseFiles/types/parsedFile.type";
+import { ParsedType } from "../../src/parseFiles/types/parsedType.type";
+import { ParsedMethod } from "../../src/parseFiles/types/parsedMethod.type";
+import { ParsedImport } from "../../src/parseFiles/types/parsedImport.type";
 
 describe("parseFile", function (): void {
   it("should parse a file", async function (): Promise<void> {

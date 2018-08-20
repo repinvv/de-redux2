@@ -1,7 +1,9 @@
 import { FullFilePath } from "../readFiles/types/fullFilePath.type";
 import { ParsedFile } from "./types/parsedFile.type";
 import * as fse from "fs-extra";
-import { parseFile } from "./parseFile";
+import { parseImports } from "./parseImports";
+import { parseTypes } from "./parseTypes";
+import { parseMethods } from "./parseMethods";
 
 export async function parseFiles(files: FullFilePath[]): Promise<ParsedFile[]> {
   return await Promise.all(files.map(readAndParseFile));
@@ -9,5 +11,10 @@ export async function parseFiles(files: FullFilePath[]): Promise<ParsedFile[]> {
 
 async function readAndParseFile(file: FullFilePath): Promise<ParsedFile> {
   const content = await fse.readFile(file.fullFilePath, "utf8");
-  return parseFile(file, content);
+  return {
+    path: file,
+    imports: parseImports(content),
+    types: parseTypes(content),
+    methods: parseMethods(content)
+  };
 }

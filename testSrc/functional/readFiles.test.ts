@@ -1,6 +1,6 @@
 import { expect } from "chai";
-import { FullFilePath } from "../src/readFiles/types/fullFilePath.type";
-import { readFiles } from "../src/readFiles/readFiles";
+import { FullFilePath } from "../../src/readFiles/types/fullFilePath.type";
+import { readFiles } from "../../src/readFiles/readFiles";
 
 describe("readFiles", function (): void {
   it("should read one path", async function (): Promise<void> {
