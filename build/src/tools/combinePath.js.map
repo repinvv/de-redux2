@@ -1,0 +1,1 @@
+{"version":3,"file":"combinePath.js","sourceRoot":"","sources":["../../../src/tools/combinePath.ts"],"names":[],"mappings":";;AAAA,SAAgB,WAAW,CAAC,IAAY,EAAE,IAAY;IACpD,IAAI,IAAI,CAAC,QAAQ,CAAC,GAAG,CAAC,EAAE;QACtB,OAAO,IAAI,GAAG,IAAI,CAAC;KACpB;IAED,OAAO,IAAI,GAAG,GAAG,GAAG,IAAI,CAAC;AAC3B,CAAC;AAND,kCAMC"}

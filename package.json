@@ -49,6 +49,12 @@
     "gulp-watch": "^4.3.11",
     "run-sequence": "^2.2.0",
     "tslint": "^5.8.0",
-    "typescript": "^2.6.2"
+    "typescript": "^3.0.1"
+  },
+  "dependencies": {
+    "@vlr/array-tools": "^1.0.12",
+    "@vlr/map-tools": "^1.0.17",
+    "@vlr/object-tools": "^1.0.5",
+    "globby": "^8.0.1"
   }
 }
