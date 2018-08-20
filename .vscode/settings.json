@@ -2,5 +2,11 @@
     "typescript.tsdk": "./node_modules/typescript/lib",
     "editor.detectIndentation": false,
     "editor.tabSize": 2,
-    "editor.fontSize": 14
+    "files.eol": "\n",
+    "tslint.autoFixOnSave": true,
+    "files.autoSave": "off",
+    "files.exclude": {
+      "**/.git": true,
+      "**/node_modules": true
+    }
 }

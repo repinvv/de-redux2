@@ -17,7 +17,7 @@
   "license": "MIT",
   "nyc": {
     "check-coverage": false,
-    "per-file": true,
+    "per-file": false,
     "include": [
       "build/src/**/*.js"
     ],
