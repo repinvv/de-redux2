@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function stripExtension(fullName) {
-    return stripToLast(fullName, ".");
+function stripExtension(fullPath) {
+    const filePath = stripToLast(fullPath.fullFilePath, ".");
+    return { filePath };
 }
 exports.stripExtension = stripExtension;
 function stripToLast(input, symbol) {

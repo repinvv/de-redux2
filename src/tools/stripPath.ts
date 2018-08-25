@@ -1,5 +1,9 @@
-export function stripExtension(fullName: string): string {
-  return stripToLast(fullName, ".");
+import { FullFilePath } from "../readFiles/types/fullFilePath.type";
+import { FilePath } from "../readFiles/types/filePath.type";
+
+export function stripExtension(fullPath: FullFilePath): FilePath {
+  const filePath = stripToLast(fullPath.fullFilePath, ".");
+  return { filePath };
 }
 
 export function stripToLast(input: string, symbol: string): string {

@@ -1,6 +1,6 @@
 import { ParsedType } from "./types/parsedType.type";
 import { regexToArray } from "@vlr/array-tools";
-import { ParsedField } from "./types/parsedField";
+import { ParsedField } from "./types/parsedField.type";
 
 export function parseTypes(content: string): ParsedType[] {
   return parseInterfaces(content)
@@ -19,18 +19,26 @@ function parseReadonlyTypes(content: string): ParsedType[] {
   return matches.map(match => parseType(match[1], match[2])).filter(x => x);
 }
 
-
 const fieldRegex = /\s*(.*)\s*:\s*([^;]*);?/g;
 function parseType(name: string, content: string): ParsedType {
   const matches = regexToArray(fieldRegex, content);
   const fields = matches.map(match => createField(match[1], match[2]));
   name = name.trim().split(" ")[0];
-  if (!name.length || fields.some(p => !p)) {
-    console.log(`Type, name: ${name} is ignored`);
+
+  if (!name.length) { return null; }
+
+  if (fields.some(p => !p)) {
+    console.log(`Type, name: ${name} is ignored, can't parse fields`);
     return null;
   }
+
+  if (!fields.length) {
+    console.log(`Type, name: ${name} is ignored, no fields found`);
+    return null;
+  }
+
   return {
-    name,
+    name: { typeName: name },
     fields
   };
 }

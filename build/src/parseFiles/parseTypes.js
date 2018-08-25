@@ -21,12 +21,19 @@ function parseType(name, content) {
     const matches = array_tools_1.regexToArray(fieldRegex, content);
     const fields = matches.map(match => createField(match[1], match[2]));
     name = name.trim().split(" ")[0];
-    if (!name.length || fields.some(p => !p)) {
-        console.log(`Type, name: ${name} is ignored`);
+    if (!name.length) {
+        return null;
+    }
+    if (fields.some(p => !p)) {
+        console.log(`Type, name: ${name} is ignored, can't parse fields`);
+        return null;
+    }
+    if (!fields.length) {
+        console.log(`Type, name: ${name} is ignored, no fields found`);
         return null;
     }
     return {
-        name,
+        name: { typeName: name },
         fields
     };
 }

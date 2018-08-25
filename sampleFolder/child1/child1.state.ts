@@ -2,7 +2,7 @@ import { DeepChildState } from "../child2/deepChild/deepChild.state";
 
 export interface Child1State {
   nonState: NonState;
-  bool: boolean;
+  bool?: boolean;
   deep: DeepChildState;
 }
 

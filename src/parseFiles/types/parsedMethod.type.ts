@@ -1,4 +1,4 @@
-import { ParsedField } from "./parsedField";
+import { ParsedField } from "./parsedField.type";
 import { TypeName } from "./typeName.type";
 
 export interface ParsedMethod {
