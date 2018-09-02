@@ -44,6 +44,7 @@
     "@types/chai": "^4.0.10",
     "@types/mocha": "^2.2.44",
     "@types/node": "^8.5.1",
+    "@types/uuid": "^3.4.4",
     "chai": "^4.1.2",
     "cross-spawn": "^5.1.0",
     "fs-extra": "^5.0.0",
@@ -57,8 +58,9 @@
   },
   "dependencies": {
     "@vlr/array-tools": "^1.0.12",
-    "@vlr/map-tools": "^1.0.17",
+    "@vlr/map-tools": "^1.0.19",
     "@vlr/object-tools": "^1.0.5",
-    "globby": "^8.0.1"
+    "globby": "^8.0.1",
+    "uuid": "^3.3.2"
   }
 }
