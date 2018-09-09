@@ -60,6 +60,7 @@
     "@vlr/array-tools": "^1.0.12",
     "@vlr/map-tools": "^1.0.19",
     "@vlr/object-tools": "^1.0.5",
+    "@vlr/ts-reexports": "^2.0.3",
     "globby": "^8.0.1",
     "uuid": "^3.3.2"
   }
