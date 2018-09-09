@@ -22,7 +22,7 @@
       "build/src/**/*.js"
     ],
     "exclude": [
-      "build/src/types/**/*.js",
+      "build/src/**/*.type.js",
       "build/testSrc/**/*.js"
     ],
     "reporter": [
