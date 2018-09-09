@@ -27,6 +27,7 @@
     ],
     "exclude": [
       "build/src/**/*.type.js",
+	  "build/src/**/index.js",
       "build/testSrc/**/*.js"
     ],
     "reporter": [
