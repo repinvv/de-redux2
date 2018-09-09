@@ -1,8 +1,7 @@
-import { PrepState } from "../prepareFiles/types/prepState.type";
-import { StateId } from "../prepareFiles/types/stateId.type";
 import { getStatePairs } from "./getStatePairs";
-import { StateMap } from "./types/maps.type";
+import { StateMap } from "./types";
 import { KeyMap } from "@vlr/map-tools";
+import { PrepState, StateId } from "../prepareFiles/types";
 
 export function getParentlessStates(states: PrepState[], stateMap: StateMap): StateId[] {
   const pairs = getStatePairs(states, stateMap);

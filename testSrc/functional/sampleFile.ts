@@ -1,7 +1,4 @@
-import { ParsedImport } from "../../src/parseFiles/types/parsedImport.type";
-import { ParsedType } from "../../src/parseFiles/types/parsedType.type";
-import { ParsedMethod } from "../../src/parseFiles/types/parsedMethod.type";
-import { ParsedFile } from "../../src/parseFiles/types/parsedFile.type";
+import { ParsedImport, ParsedType, ParsedMethod, ParsedFile } from "../../src/parseFiles/types";
 
 const path = { filePath: "./sampleFolder/child1/child1.state" };
 const imports: ParsedImport[] = [{

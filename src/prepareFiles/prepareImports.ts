@@ -1,8 +1,7 @@
-import { ParsedFile } from "../parseFiles/types/parsedFile.type";
-import { ParsedImport } from "../parseFiles/types/parsedImport.type";
-import { FilePath } from "../readFiles/types/filePath.type";
 import { translateImportPathToFilePath } from "./translateImportPathToFilePath";
-import { PrepImport } from "./types/prepType.type";
+import { ParsedFile, ParsedImport } from "../parseFiles/types";
+import { PrepImport } from "./types";
+import { FilePath } from "../readFiles/types";
 
 export function prepareImports(file: ParsedFile, tsconfig: any): PrepImport[] {
   return file.imports.map(imp => prepareImport(imp, file.path, tsconfig)).concat(createLocalImports(file));

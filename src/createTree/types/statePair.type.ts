@@ -1,4 +1,4 @@
-import { StateId } from "../../prepareFiles/types/stateId.type";
+import { StateId } from "../../prepareFiles/types";
 
 export interface StatePair {
   parent: StateId;

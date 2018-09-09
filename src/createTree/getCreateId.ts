@@ -1,4 +1,4 @@
-import { NodeId } from "./types/nodeId.type";
+import { NodeId } from "./types";
 import { IdType } from "../options";
 import { v4 as uuid } from "uuid";
 

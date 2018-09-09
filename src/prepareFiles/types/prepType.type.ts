@@ -1,6 +1,6 @@
-import { TypeName } from "../../parseFiles/types/typeName.type";
+import { TypeName } from "../../parseFiles/types";
 import { StateId } from "./stateId.type";
-import { FilePath } from "../../readFiles/types/filePath.type";
+import { FilePath } from "../../readFiles/types";
 
 export interface PrepType {
   typeName: TypeName;

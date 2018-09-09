@@ -1,4 +1,4 @@
-import { StateId } from "../../prepareFiles/types/stateId.type";
+import { StateId } from "../../prepareFiles/types";
 import { NodeChild } from "./nodeChild.type";
 import { NodeId } from "./nodeId.type";
 

@@ -1,6 +1,5 @@
-import { ParsedType } from "./types/parsedType.type";
 import { regexToArray } from "@vlr/array-tools";
-import { ParsedField } from "./types/parsedField.type";
+import { ParsedType, ParsedField } from "./types";
 
 export function parseTypes(content: string): ParsedType[] {
   return parseInterfaces(content)

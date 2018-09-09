@@ -1,11 +1,11 @@
-import { PrepState } from "../prepareFiles/types/prepState.type";
-import { Tree } from "./types/tree.type";
+import { Tree } from "./types";
 import { getParentlessStates } from "./getParentlessStates";
 import { IdType } from "../options";
 import { getCreateId } from "./getCreateId";
 import { createNode } from "./createNode";
 import { flatMap } from "@vlr/array-tools";
 import { KeyMap } from "@vlr/map-tools";
+import { PrepState } from "../prepareFiles/types";
 
 export function createTree(states: PrepState[], idType: IdType): Tree {
   const stateMap = new KeyMap(state => state.id, states);

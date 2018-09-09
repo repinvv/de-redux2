@@ -1,7 +1,6 @@
-import { PrepState } from "../prepareFiles/types/prepState.type";
-import { StateMap } from "./types/maps.type";
-import { StatePair } from "./types/statePair.type";
 import { flatMap } from "@vlr/array-tools";
+import { StateMap, StatePair } from "./types";
+import { PrepState } from "../prepareFiles/types";
 
 export function getStatePairs(states: PrepState[], stateMap: StateMap): StatePair[] {
   return flatMap(states, state => getPairs(state, stateMap));

@@ -1,7 +1,7 @@
 import { last } from "@vlr/array-tools";
 import { forIn } from "@vlr/object-tools/build/src";
-import { ImportPath } from "../parseFiles/types/importPath.type";
-import { FilePath } from "../readFiles/types/filePath.type";
+import { ImportPath } from "../parseFiles/types";
+import { FilePath } from "../readFiles/types";
 import { combinePath } from "../tools/combinePath";
 
 export function translateImportPathToFilePath(parsedFile: FilePath, importPath: ImportPath, tsconfig: any): FilePath {

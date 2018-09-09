@@ -1,4 +1,4 @@
-import { ParsedImport } from "./types/parsedImport.type";
+import { ParsedImport } from "./types";
 import { regexToArray, flatMap } from "@vlr/array-tools";
 
 const importRegex = /import[\s]*{(.*)}[\s]*from[\s]*["|"](.*)["|"]/g;

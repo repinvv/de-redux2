@@ -1,5 +1,4 @@
-import { FullFilePath } from "../readFiles/types/fullFilePath.type";
-import { FilePath } from "../readFiles/types/filePath.type";
+import { FullFilePath, FilePath } from "../readFiles/types";
 
 export function stripExtension(fullPath: FullFilePath): FilePath {
   const filePath = stripToLast(fullPath.fullFilePath, ".");

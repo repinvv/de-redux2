@@ -1,3 +1,3 @@
-import { PrepImport } from "./types/prepType.type";
+import { PrepImport } from "./types";
 
 export type PrepImportsMap = Map<string, PrepImport>;

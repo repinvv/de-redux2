@@ -1,9 +1,9 @@
-import { ParsedType } from "../parseFiles/types/parsedType.type";
-import { FilePath } from "../readFiles/types/filePath.type";
 import { PrepImportsMap } from "./prepImportsMap.type";
-import { PrepState } from "./types/prepState.type";
 import { createStateId } from "./createStateId";
 import { prepareField } from "./prepareField";
+import { ParsedType } from "../parseFiles/types";
+import { FilePath } from "../readFiles/types";
+import { PrepState } from "./types";
 
 export function prepareState(type: ParsedType, path: FilePath, imports: PrepImportsMap): PrepState {
   return {

@@ -1,10 +1,10 @@
 import { flatMap } from "@vlr/array-tools";
 import { toMap } from "@vlr/map-tools";
-import { ParsedFile } from "../parseFiles/types/parsedFile.type";
+import { ParsedFile } from "../parseFiles/types";
 import { prepareImports } from "./prepareImports";
 import { prepareReduction } from "./prepareReduction";
 import { prepareState } from "./prepareState";
-import { PrepModel } from "./types/prepModel.type";
+import { PrepModel } from "./types";
 
 export function prepareFiles(parsed: ParsedFile[], tsconfig: any): PrepModel {
   const models = parsed.map(file => prepareFile(file, tsconfig));

@@ -1,10 +1,7 @@
-import { StateId } from "../prepareFiles/types/stateId.type";
-import { StateMap } from "./types/maps.type";
-import { TreeNode } from "./types/treeNode.type";
 import { CreateId } from "./getCreateId";
-import { PrepField } from "../prepareFiles/types/prepField.type";
-import { NodeChild } from "./types/nodeChild.type";
 import { flatMap } from "@vlr/array-tools";
+import { StateId, PrepField } from "../prepareFiles/types";
+import { StateMap, TreeNode, NodeChild } from "./types";
 
 export function createNode(stateId: StateId, stateMap: StateMap, createId: CreateId): [TreeNode, TreeNode[]] {
   const state = stateMap.get(stateId);

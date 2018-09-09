@@ -1,8 +1,7 @@
-import { ParsedMethod } from "./types/parsedMethod.type";
 import { regexToArray } from "@vlr/array-tools";
-import { ParsedField } from "./types/parsedField.type";
 import { splitParameters } from "./splitParameters";
 import { isComplexType } from "./isComplexType";
+import { ParsedMethod, ParsedField } from "./types";
 
 const funcRegex = /export\s*function\s*([^\(\s]*)\s*?\(([^\)]*)\): ([^{\s]*)\s*?{/g;
 export function parseMethods(content: string): ParsedMethod[] {

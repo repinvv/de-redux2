@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { FullFilePath } from "../../src/readFiles/types/fullFilePath.type";
+import { FullFilePath } from "../../src/readFiles/types";
 import { readFiles } from "../../src/readFiles/readFiles";
 
 describe("readFiles", function (): void {

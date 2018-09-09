@@ -1,9 +1,7 @@
 import { expect } from "chai";
 import { prepareFiles } from "../../src/prepareFiles/prepareFiles";
-import { PrepModel } from "../../src/prepareFiles/types/prepModel.type";
-import { PrepReduction } from "../../src/prepareFiles/types/prepReduction.type";
-import { PrepState } from "../../src/prepareFiles/types/prepState.type";
 import { sampleFile } from "./sampleFile";
+import { PrepState, PrepReduction, PrepModel } from "../../src/prepareFiles/types";
 
 describe("prepareFiles", function (): void {
   it("should prepare a model", async function (): Promise<void> {

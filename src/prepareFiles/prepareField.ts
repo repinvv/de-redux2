@@ -1,9 +1,7 @@
-import { ParsedField } from "../parseFiles/types/parsedField.type";
 import { PrepImportsMap } from "./prepImportsMap.type";
-import { PrepField } from "./types/prepField.type";
-import { TypeName } from "../parseFiles/types/typeName.type";
-import { PrepType, PrepImport } from "./types/prepType.type";
 import { createStateId } from "./createStateId";
+import { ParsedField, TypeName } from "../parseFiles/types";
+import { PrepField, PrepType, PrepImport } from "./types";
 
 export function prepareField(field: ParsedField, imports: PrepImportsMap): PrepField {
   const isOptional = field.name.endsWith("?");
