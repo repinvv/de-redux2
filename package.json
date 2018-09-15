@@ -46,6 +46,7 @@
     "@types/mocha": "^2.2.44",
     "@types/node": "^8.5.1",
     "@types/uuid": "^3.4.4",
+    "@vlr/ts-reexports": "^2.1.1",
     "chai": "^4.1.2",
     "cross-spawn": "^5.1.0",
     "fs-extra": "^5.0.0",
@@ -61,7 +62,6 @@
     "@vlr/array-tools": "^1.0.12",
     "@vlr/map-tools": "^1.0.19",
     "@vlr/object-tools": "^1.0.5",
-    "@vlr/ts-reexports": "^2.0.4",
     "globby": "^8.0.1",
     "uuid": "^3.3.2"
   }
