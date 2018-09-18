@@ -32,7 +32,7 @@ const methods: ParsedMethod[] = [
   }
 ];
 
-export const sampleFile: ParsedFile = {
+export const parsedSample: ParsedFile = {
   path,
   imports,
   types,
