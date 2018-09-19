@@ -36,7 +36,7 @@ export const testStates: PrepState[] = [
   {
     id: { stateId: "./sampleFolder/child1/child1.state#SubState" },
     fields: [{
-      name: "deep",
+      name: "deep2",
       isOptional: false,
       type: {
         typeName: { typeName: "DeepChildState" },

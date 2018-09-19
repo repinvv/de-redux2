@@ -22,7 +22,7 @@ const expectedNodes: TreeNode[] = [
     children: [
       {
         id: { nodeId: "4" },
-        field: "deep"
+        field: "deep2"
       }
     ]
   },
@@ -38,7 +38,7 @@ const expectedNodes: TreeNode[] = [
   }
 ];
 
-export const expectedResult: Tree = {
+export const expectedTree: Tree = {
   nodes: new KeyMap(node => node.id, expectedNodes),
   roots: [{ nodeId: "1" }]
 };

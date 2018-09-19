@@ -1,7 +1,7 @@
 import { createTree } from "../../../src/createTree/createTree";
 import { IdType } from "../../../src/options";
 import { testStates } from "./testStates";
-import {  expectedResult } from "./expectedResults";
+import {  expectedTree } from "./expectedTree";
 import { assertTree } from "./assertTree";
 
 describe("createTree", function (): void {
@@ -12,7 +12,7 @@ describe("createTree", function (): void {
     const result = await createTree(testStates, IdType.number);
 
     // assert
-    assertTree(expectedResult, result);
+    assertTree(expectedTree, result);
   });
 });
 
