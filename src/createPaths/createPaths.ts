@@ -22,12 +22,12 @@ function createChildPaths(root: NodeId, child: NodeChild, tree: Tree, currentPat
   return createNodePaths(root, node, tree, path);
 }
 
-function nodePath(root: NodeId, node: TreeNode, path: string[]): ModelPath {
+function nodePath(root: NodeId, node: TreeNode, fieldPath: string[]): ModelPath {
   return {
     root,
     node: node.id,
     state: node.stateId,
-    path
+    path: { fieldPath }
   };
 }
 

@@ -1,5 +1,6 @@
 export interface Options {
   lineFeed?: string;
+  quotes?: string;
   IdType?: IdType;
 }
 

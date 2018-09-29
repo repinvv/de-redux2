@@ -6,7 +6,7 @@ import { parseFiles } from "./parseFiles/parseFiles";
 import { prepareFiles } from "./prepareFiles/prepareFiles";
 
 const defaultOptions: Options = {
-  lineFeed: "\r\n",
+  lineFeed: "\n",
   IdType: IdType.number
 };
 

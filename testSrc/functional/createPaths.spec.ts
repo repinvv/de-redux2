@@ -10,25 +10,25 @@ describe("createPaths", function (): void {
       {
         root: { nodeId: "1" },
         node: { nodeId: "1" },
-        path: [],
+        path: { fieldPath: [] },
         state: { stateId: "./sampleFolder/child1/child1.state#Child1State" }
       },
       {
         root: { nodeId: "1" },
         node: { nodeId: "2" },
-        path: ["subState"],
+        path: { fieldPath: ["subState"] },
         state: { stateId: "./sampleFolder/child1/child1.state#SubState" }
       },
       {
         root: { nodeId: "1" },
         node: { nodeId: "3" },
-        path: ["deep"],
+        path: { fieldPath: ["deep"] },
         state: { stateId: "./sampleFolder/child2/deepChild/deepChild.state#DeepChildState" }
       },
       {
         root: { nodeId: "1" },
         node: { nodeId: "4" },
-        path: ["subState", "deep2"],
+        path: { fieldPath: ["subState", "deep2"] },
         state: { stateId: "./sampleFolder/child2/deepChild/deepChild.state#DeepChildState" }
       }
     ];
