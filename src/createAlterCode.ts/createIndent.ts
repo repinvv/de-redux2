@@ -6,5 +6,5 @@ export function createIndent(amount: number = 1): string {
     return indents[amount];
   }
 
-  return indents[amount] = new Array(amount * indentSize).map(i => " ").join("");
+  return indents[amount] = new Array(amount * indentSize).fill(" ").join("");
 }

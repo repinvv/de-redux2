@@ -30,7 +30,7 @@ export class StringGen {
 
   public append(text: string): StringGen {
     const sg = this.eol ? this.appendIndent() : this;
-    return new StringGen(sg.lf, sg.indent, [...sg.strings, text], sg.eol);
+    return new StringGen(sg.lf, sg.indent, [...sg.strings, text], false);
   }
 
   public braces(func: SGFunc): StringGen {
@@ -39,6 +39,10 @@ export class StringGen {
 
   public bracesSemicolon(func: SGFunc): StringGen {
     return this.bracesImpl(func, "};");
+  }
+
+  public bracesComma(func: SGFunc): StringGen {
+    return this.bracesImpl(func, "},");
   }
 
   public toString(): string {
@@ -59,7 +63,7 @@ export class StringGen {
 
   private appendIndent(): StringGen {
     return this.indent > 0
-      ? new StringGen(this.lf, this.indent, [...this.strings, createIndent(this.indent)], this.eol)
+      ? new StringGen(this.lf, this.indent, [...this.strings, createIndent(this.indent)], false)
       : this;
   }
 }

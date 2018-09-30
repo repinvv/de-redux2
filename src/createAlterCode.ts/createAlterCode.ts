@@ -25,8 +25,8 @@ function printGroup(sgen: StringGen, paths: AlterPath[], action: AlterAction, cu
     if (paths.length > 1) { throw new Error(`incorrect paths at ${joined}`); }
     return sgen.appendLine(`${path[0]}: ${action(`prev.${joined}`)},`);
   }
-  return sgen.appendLine(`${path[0]}: `)
-    .braces(sg => printAlterPaths(sg, subPaths(paths), action, current));
+  return sgen.append(`${path[0]}: `)
+    .bracesComma(sg => printAlterPaths(sg, subPaths(paths), action, current));
 }
 
 function subPaths(paths: AlterPath[]): AlterPath[] {
