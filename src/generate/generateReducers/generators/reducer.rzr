@@ -1,0 +1,8 @@
+@import { ReducerGenModel } from "../types";
+@parameters model: ReducerGenModel
+@exportname reducerGenerator
+
+@foreach(let imp of model.imports) {
+import @imp.imported from '@imp.path';
+}
+@eol

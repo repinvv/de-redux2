@@ -4,7 +4,7 @@ import { IdType } from "../options";
 import { getCreateId } from "./getCreateId";
 import { createNode } from "./createNode";
 import { flatMap } from "@vlr/array-tools";
-import { KeyMap } from "@vlr/map-tools";
+import { KeyMap, mapBy } from "@vlr/map-tools";
 import { PrepState } from "../prepareFiles/types";
 
 export function createTree(states: PrepState[], idType: IdType): Tree {
@@ -14,7 +14,8 @@ export function createTree(states: PrepState[], idType: IdType): Tree {
   const allNodes = flatMap(nodeResults, nr => nr[1]);
   const roots = nodeResults.map(nr => nr[0].id);
   return {
-    nodes: new KeyMap(node => node.id, allNodes),
+    nodes: mapBy(allNodes, node => node.id),
+    states: mapBy(states, state => state.id),
     roots
   };
 }

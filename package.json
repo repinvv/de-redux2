@@ -1,6 +1,6 @@
 {
-  "name": "tslib-seed",
-  "version": "1.0.0",
+  "name": "@vlr/de-redux",
+  "version": "2.0.0",
   "description": "update this",
   "files": [
     "src",
@@ -39,7 +39,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/repinvv/tslib-seed.git"
+    "url": "git@github.com:repinvv/de-redux2.git"
   },
   "devDependencies": {
     "@types/chai": "^4.0.10",
@@ -52,6 +52,8 @@
     "fs-extra": "^5.0.0",
     "gulp": "^3.9.1",
     "gulp-mocha": "3.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-transform": "^3.0.5",
     "gulp-tslint": "^8.1.2",
     "gulp-watch": "^4.3.11",
     "run-sequence": "^2.2.0",
@@ -60,8 +62,9 @@
   },
   "dependencies": {
     "@vlr/array-tools": "^1.0.12",
-    "@vlr/map-tools": "^1.2.1",
+    "@vlr/map-tools": "^1.2.3",
     "@vlr/object-tools": "^1.0.5",
+    "@vlr/razor": "^1.99.991",
     "globby": "^8.0.1",
     "uuid": "^3.3.2"
   }

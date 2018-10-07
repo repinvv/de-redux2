@@ -1,6 +1,6 @@
 import { ModelPath } from "./types";
-import { Tree, NodeId, TreeNode, NodeChild } from "../createTree/types";
 import { flatMap } from "@vlr/array-tools";
+import { Tree, NodeId, TreeNode, NodeChild } from "../../../createTree/types";
 
 export function createPaths(tree: Tree): ModelPath[] {
   return flatMap(tree.roots, root => createRootPaths(root, tree));
