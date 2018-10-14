@@ -1,5 +1,5 @@
 import { StateId } from "../../prepareFiles/types";
-import { FolderPath } from "./types/folderPath.type";
+import { FolderPath } from "./types";
 import { stripToLast } from "../../tools/stripPath";
 import { genConstants } from "../genConstants";
 import { FullFilePath } from "../../readFiles/types";

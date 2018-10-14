@@ -1,7 +1,7 @@
-import { createPaths } from "../../src/createPaths/createPaths";
 import { expectedTree } from "./createTree/expectedTree";
-import { ModelPath } from "../../src/createPaths/types";
 import { expect } from "chai";
+import { ModelPath } from "../../src/generate/generateReducers/createPaths/types";
+import { createPaths } from "../../src/generate/generateReducers/createPaths/createPaths";
 
 describe("createPaths", function (): void {
   it("should create paths", async function (): Promise<void> {
@@ -9,27 +9,27 @@ describe("createPaths", function (): void {
     const expected: ModelPath[] = [
       {
         root: { nodeId: "1" },
-        node: { nodeId: "1" },
+        nodeId: { nodeId: "1" },
         path: { fieldPath: [] },
-        state: { stateId: "./sampleFolder/child1/child1.state#Child1State" }
+        stateId: { stateId: "./sampleFolder/child1/child1.state#Child1State" }
       },
       {
         root: { nodeId: "1" },
-        node: { nodeId: "2" },
+        nodeId: { nodeId: "2" },
         path: { fieldPath: ["subState"] },
-        state: { stateId: "./sampleFolder/child1/child1.state#SubState" }
+        stateId: { stateId: "./sampleFolder/child1/child1.state#SubState" }
       },
       {
         root: { nodeId: "1" },
-        node: { nodeId: "3" },
+        nodeId: { nodeId: "3" },
         path: { fieldPath: ["deep"] },
-        state: { stateId: "./sampleFolder/child2/deepChild/deepChild.state#DeepChildState" }
+        stateId: { stateId: "./sampleFolder/child2/deepChild/deepChild.state#DeepChildState" }
       },
       {
         root: { nodeId: "1" },
-        node: { nodeId: "4" },
+        nodeId: { nodeId: "4" },
         path: { fieldPath: ["subState", "deep2"] },
-        state: { stateId: "./sampleFolder/child2/deepChild/deepChild.state#DeepChildState" }
+        stateId: { stateId: "./sampleFolder/child2/deepChild/deepChild.state#DeepChildState" }
       }
     ];
     // act
@@ -46,6 +46,6 @@ function assertPaths(result: ModelPath[], expected: ModelPath[]): void {
 }
 
 function assertPath(result: ModelPath[], expPath: ModelPath): void {
-  const resultPath = result.find(res => res.node.nodeId === expPath.node.nodeId);
+  const resultPath = result.find(res => res.nodeId.nodeId === expPath.nodeId.nodeId);
   expect(resultPath).deep.equals(expPath);
 }

@@ -39,6 +39,7 @@ const expectedNodes: TreeNode[] = [
 ];
 
 export const expectedTree: Tree = {
+  states: new KeyMap(state => state.id),
   nodes: new KeyMap(node => node.id, expectedNodes),
   roots: [{ nodeId: "1" }]
 };

@@ -1,5 +1,5 @@
 import { PrepReduction } from "../../prepareFiles/types";
-import { StateReductionsBlock, ReductionsBlock } from "./types/stateReductionsBlock.type";
+import { StateReductionsBlock, ReductionsBlock } from "./types";
 import { groupBy } from "@vlr/map-tools";
 import { getReductionState } from "./helpers/getReducerState";
 

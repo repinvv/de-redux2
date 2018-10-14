@@ -3,6 +3,6 @@
 @exportname reducerGenerator
 
 @foreach(let imp of model.imports) {
-import @imp.imported from '@imp.path';
+import @imp.importName from '@imp.path';
 }
 @eol
