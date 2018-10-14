@@ -4,7 +4,7 @@ import { StateId } from "../../../../prepareFiles/types";
 
 export interface ModelPath {
   root: NodeId;
-  node: NodeId;
+  nodeId: NodeId;
   path: FieldPath;
-  state: StateId;
+  stateId: StateId;
 }

@@ -25,8 +25,8 @@ function createChildPaths(root: NodeId, child: NodeChild, tree: Tree, currentPat
 function nodePath(root: NodeId, node: TreeNode, fieldPath: string[]): ModelPath {
   return {
     root,
-    node: node.id,
-    state: node.stateId,
+    nodeId: node.id,
+    stateId: node.stateId,
     path: { fieldPath }
   };
 }

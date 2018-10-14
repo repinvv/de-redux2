@@ -19,7 +19,7 @@ function generateContent(gen: Generator, model: ReducerGenModel): void {
     const indent = gen.indent;
     for (let imp of model.imports) {
         gen.append(`import `);
-        gen.append((imp.imported).toString());
+        gen.append((imp.importName).toString());
         gen.append(` from `);
         gen.apostrophe();
         gen.append((imp.path).toString());

@@ -61,10 +61,12 @@
     "typescript": "^3.0.1"
   },
   "dependencies": {
-    "@vlr/array-tools": "^1.0.12",
+    "@types/change-case": "^2.3.1",
+    "@vlr/array-tools": "^1.0.14",
     "@vlr/map-tools": "^1.2.3",
     "@vlr/object-tools": "^1.0.5",
     "@vlr/razor": "^1.99.991",
+    "change-case": "^3.0.2",
     "globby": "^8.0.1",
     "uuid": "^3.3.2"
   }

@@ -1,4 +1,4 @@
 export interface GenImport {
-  imported: string;
+  importName: string;
   path: string;
 }
