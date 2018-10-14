@@ -1,8 +1,21 @@
 @import { ReducerGenModel } from "../types";
 @parameters model: ReducerGenModel
 @exportname reducerGenerator
+@import { reducerActionGenerator } from "./reducerAction";
 
-@foreach(let imp of model.imports) {
+import { IAction } from "@@vlr/de-redux/types";
+import { actions, actionTypes } from "./@model.actionsFile";
+@foreach(const imp of model.imports) {
 import @imp.importName from '@imp.path';
 }
 @eol
+
+export function @(model.reducerName)(prev: @model.rootStateType, action: IAction): @model.rootStateType {
+  switch(action.type){
+@foreach(const action of model.actions){
+    @[reducerActionGenerator(action)]
+}
+    default:
+      return prev;
+  }
+}

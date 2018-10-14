@@ -1,0 +1,17 @@
+@import { ReducerGenAction } from "../types";
+@parameters action: ReducerGenAction
+@exportname reducerActionGenerator
+
+case actionTypes.@action.type:
+@if(action.alterById) {
+switch(action.stateId){
+ @foreach(const alter of action.alters){
+case @alter.id:
+  return @alter.code;
+ }
+default:
+  return @action.defaultAlter;
+@}
+ } else {
+return @action.defaultAlter;
+ }
