@@ -1,5 +1,5 @@
 import { FolderPath } from "../types/folderPath.type";
-import { FilePath } from "../../../readFiles/types";
+import { FilePath } from "../../readFiles/types";
 
 export function getRelativePath(folderPath: FolderPath, imported: FilePath): string {
   const path = imported.filePath;

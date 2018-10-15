@@ -6,7 +6,7 @@
 //  manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 // -----------------------------------------------------------------------------
-import { Generator, GenerationParams } from '@vlr/razor';
+import { Generator, GenerationParams } from "@vlr/razor/types";
 import { ReducerGenModel } from "../types";
 import { reducerActionGenerator } from "./reducerAction";
 
@@ -18,54 +18,55 @@ function generate(model: ReducerGenModel, params: GenerationParams): string {
 
 function generateContent(gen: Generator, model: ReducerGenModel): void {
     const indent = gen.indent;
-    gen.append('import { IAction } from ');
+    gen.append(`import { IAction } from `);
     gen.quote();
-    gen.append('@vlr/de-redux/types');
+    gen.append(`@vlr/de-redux/types`);
     gen.quote();
-    gen.append(';');
+    gen.append(`;`);
     gen.eol();
-    gen.append('import { actions, actionTypes } from ');
+    gen.append(`import { actions, actionTypes } from `);
     gen.quote();
-    gen.append('./');
+    gen.append(`./`);
     gen.append((model.actionsFile).toString());
     gen.quote();
-    gen.append(';');
+    gen.append(`;`);
     gen.eol();
     for (const imp of model.imports) {
-        gen.append('import ');
+        gen.append(`import `);
         gen.append((imp.importName).toString());
-        gen.append(' from ');
+        gen.append(` from `);
         gen.apostrophe();
         gen.append((imp.path).toString());
         gen.apostrophe();
-        gen.append(';');
+        gen.append(`;`);
         gen.eol();
     }
     gen.forceEol();
-    gen.append('export function ');
+    gen.append(`export function `);
     gen.append((model.reducerName).toString());
-    gen.append('(prev: ');
+    gen.append(`(prev: `);
     gen.append((model.rootStateType).toString());
-    gen.append(', action: IAction): ');
+    gen.append(`, action: IAction): `);
     gen.append((model.rootStateType).toString());
-    gen.append(' {');
+    gen.append(` {`);
     gen.eol();
-    gen.append('  switch(action.type){');
+    gen.append(`  switch(action.type){`);
     gen.eol();
     for (const action of model.actions) {
-        gen.indent = indent + '    ';
+        gen.indent = indent + "    ";
         reducerActionGenerator.generateContent(gen, action);
         gen.indent = indent;
         gen.eol();
     }
-    gen.append('    default:');
+    gen.append(`    default:`);
     gen.eol();
-    gen.append('      return prev;');
+    gen.append(`      return prev;`);
     gen.eol();
-    gen.append('  }');
+    gen.append(`  }`);
     gen.eol();
-    gen.append('}');
+    gen.append(`}`);
     gen.eol();
+    gen.indent = indent;
 }
 
 export const reducerGenerator = {

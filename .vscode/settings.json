@@ -1,12 +1,18 @@
 {
-    "typescript.tsdk": "./node_modules/typescript/lib",
-    "editor.detectIndentation": false,
-    "editor.tabSize": 2,
-    "files.eol": "\n",
-    "tslint.autoFixOnSave": true,
-    "files.autoSave": "off",
-    "files.exclude": {
-      "**/.git": true,
-      "**/node_modules": true
-    }
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "tslint.autoFixOnSave": true,
+  "files.autoSave": "off",
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/.nyc_output": true,
+    "**/build": true,
+    "**/coverage": true,
+    "package-lock.json": true,
+    "*.cmd": true,
+    "index.*": true
+  }
 }
