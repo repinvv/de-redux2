@@ -1,7 +1,7 @@
 import { PrepReduction } from "../../prepareFiles/types";
 import { StateReductionsBlock, ReductionsBlock } from "./types";
 import { groupBy } from "@vlr/map-tools";
-import { getReductionState } from "./helpers/getReducerState";
+import { getReductionState } from "../helpers/getReductionState";
 
 export function createReductionBlocks(reductions: PrepReduction[]): StateReductionsBlock[] {
   const byState = groupBy(reductions, getReductionState);

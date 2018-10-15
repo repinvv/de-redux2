@@ -1,9 +1,9 @@
 import { StateId } from "../../prepareFiles/types";
-import { FolderPath } from "./types";
 import { stripToLast } from "../../tools/stripPath";
 import { genConstants } from "../genConstants";
 import { FullFilePath } from "../../readFiles/types";
-import { getStateName } from "./helpers/getStateName";
+import { createReducerName } from "./createReducerName";
+import { FolderPath } from "../types";
 
 export function getReducerFolder(stateId: StateId): FolderPath {
   const stateFolder = stripToLast(stateId.stateId, "/");
@@ -11,5 +11,5 @@ export function getReducerFolder(stateId: StateId): FolderPath {
 }
 
 export function createReducerPath(stateId: StateId): FullFilePath {
-  return { fullFilePath: `${getReducerFolder(stateId)}/${getStateName(stateId)}Reducer.ts` };
+  return { fullFilePath: `${getReducerFolder(stateId)}/${createReducerName(stateId)}.ts` };
 }
