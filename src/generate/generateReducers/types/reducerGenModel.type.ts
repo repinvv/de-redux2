@@ -7,11 +7,11 @@ export interface ReducerGenModel {
   imports: GenImport[]; // imports to address reductions
   reducerName: string; // name of the reducer, like "employeesStateReducer"
   rootStateType: string; // type name of the root state
-  actions: ReducerGenAction[]; // action processed by the reducer
+  actions: ReducerGenAction[]; // actions processed by the reducer
 }
 
 export interface ReducerGenAction {
-  type: string; // name of the action type constant to use as actionTypes.employeeState_addEmployee;
+  type: string; // name of the action type constant to use, like actionTypes.employeeState_addEmployee;
   alterById: boolean; // if state has id, and is present more than once in the tree,
   // then there should be a switch by id in order to choose alter code;
   // if not, or if the id is not recognized(default), then all the states of this type need to alter;
