@@ -6,7 +6,7 @@ export class StringGen {
   constructor(private readonly lf: string = "\n",
     private readonly indent: number = 0,
     private readonly strings: string[] = [],
-    private readonly eol: boolean = false
+    private readonly eol: boolean = true
   ) { }
 
   public pushIndent(amount: number = 1): StringGen {
