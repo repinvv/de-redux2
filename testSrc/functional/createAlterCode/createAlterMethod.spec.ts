@@ -1,6 +1,9 @@
 
 import { expect } from "chai";
-import { createAlterMethod } from "../../../src/createAlterCode.ts/createAlterCode";
+import { createAlterMethod } from "../../../src/createAlterCode/createAlterCode";
+import { collapseSpaces } from "../../../src/createAlterCode/collapseSpaces";
+
+const options = { lineFeed: "\n", srcName: "prev", indent: 2 };
 
 describe("createAlterMethod", function (): void {
   it("should create a method off single path", async function (): Promise<void> {
@@ -19,10 +22,10 @@ describe("createAlterMethod", function (): void {
 }
 `;
     // act
-    const result = createAlterMethod([path], act, { lineFeed: "\n" });
+    const result = createAlterMethod([path], act, options);
 
     // assert
-    expect(result).equals(expected);
+    expect(collapseSpaces(result)).equals(collapseSpaces(expected));
   });
 
   it("should create a method off several paths", async function (): Promise<void> {
@@ -55,9 +58,9 @@ describe("createAlterMethod", function (): void {
 }
 `;
     // act
-    const result = createAlterMethod(paths, act, { lineFeed: "\n" });
+    const result = createAlterMethod(paths, act, options);
 
     // assert
-    expect(result).equals(expected);
+    expect(collapseSpaces(result)).equals(collapseSpaces(expected));
   });
 });

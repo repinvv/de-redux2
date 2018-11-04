@@ -47,7 +47,7 @@ export class StringGen {
 
   public toString(): string {
     if (this.indent > 0) {
-      throw new Error("indent error");
+      console.warn("Possible indent error - indent remaining " + this.indent);
     }
     return this.strings.join("");
   }

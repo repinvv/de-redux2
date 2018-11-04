@@ -18,6 +18,6 @@ export function createReducerModel(root: NodeId, paths: ModelPath[], blocks: Sta
     reducerName: createReducerName(rootStateId),
     actionsFile: createDirectActionsFileImport(rootStateId),
     rootStateType: getStateName(rootStateId),
-    actions: createReducerActions(paths, blocks)
+    actions: createReducerActions(paths, blocks, tree)
   };
 }

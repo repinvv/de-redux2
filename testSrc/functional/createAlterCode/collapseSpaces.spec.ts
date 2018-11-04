@@ -1,4 +1,4 @@
-import { collapseSpaces } from "../../../src/createAlterCode.ts/collapseSpaces";
+import { collapseSpaces } from "../../../src/createAlterCode/collapseSpaces";
 import { expect } from "chai";
 
 describe("collapseSpaces", function (): void {
