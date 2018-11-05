@@ -9,11 +9,11 @@ export interface AlterOptions {
   indent: number;
 }
 
-
 export function createAlterMethod(paths: AlterPath[], action: AlterAction, options: AlterOptions): string {
-  return new StringGen(options.lineFeed, options.indent)
+  const method = new StringGen(options.lineFeed, options.indent)
     .braces(sgen => printAlterPaths(sgen, paths, action, [], options))
     .toString();
+  return method.trim();
 }
 
 function printAlterPaths(sgen: StringGen, paths: AlterPath[], action: AlterAction, current: string[], options: AlterOptions): StringGen {

@@ -1,4 +1,4 @@
-import { getStateName } from "./getStateName";
+import { getStateName } from "../naming/getStateName";
 import { StateId } from "../../prepareFiles/types";
 
 export function createReducerName(stateId: StateId): string {

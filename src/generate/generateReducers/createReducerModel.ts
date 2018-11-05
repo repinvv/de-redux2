@@ -6,8 +6,8 @@ import { getReducerFolder, createReducerPath } from "../helpers/createReducerPat
 import { createReducerImports } from "./createReducerImports";
 import { createReducerName } from "../helpers/createReducerName";
 import { createDirectActionsFileImport } from "./createDirectActionsFileImport";
-import { getStateName } from "../helpers/getStateName";
-import { createReducerActions } from "./createReducerActions";
+import { getStateName } from "../naming/getStateName";
+import { createReducerActions } from "./createActions/createReducerActions";
 
 export function createReducerModel(root: NodeId, paths: ModelPath[], blocks: StateReductionsBlock[], tree: Tree): ReducerGenModel {
   const rootStateId = getNode(tree, root).stateId;

@@ -10,7 +10,7 @@ describe("createAlterMethod", function (): void {
     // arrange
     const path = ["field1", "field2", "field3"];
     const act = str => `call(${str})`;
-    const expected = ` {
+    const expected = `{
    ...prev,
    field1: {
      ...prev.field1,
@@ -41,7 +41,7 @@ describe("createAlterMethod", function (): void {
     ];
 
     const act = str => `call(${str})`;
-    const expected = ` {
+    const expected = `{
    ...prev,
    field1: {
      ...prev.field1,

@@ -2,16 +2,19 @@
 @parameters action: ReducerGenAction
 @exportname reducerActionGenerator
 
-case actionTypes.@action.type:
+case actionTypes.@action.actionConstant:
+@if(action.castIndex){
+  const a@action.castIndex = <actions.@action.actionClass>action;
+}
 @if(action.alterById) {
-switch(action.stateId){
+  switch(action.stateId){
  @foreach(const alter of action.alters){
-case @alter.id:
-  return @alter.code;
+    case @alter.id:
+      return @alter.code;
  }
-default:
-  return @action.defaultAlter;
-@}
+  default:
+    return @action.defaultAlter;
+  @}
  } else {
 return @action.defaultAlter;
  }

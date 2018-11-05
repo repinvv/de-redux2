@@ -18,29 +18,37 @@ function generate(action: ReducerGenAction, params: GenerationParams): string {
 function generateContent(gen: Generator, action: ReducerGenAction): void {
     const indent = gen.indent;
     gen.append(`case actionTypes.`);
-    gen.append((action.type).toString());
+    gen.append((action.actionConstant).toString());
     gen.append(`:`);
     gen.eol();
+    if (action.castIndex) {
+        gen.append(`  const a`);
+        gen.append((action.castIndex).toString());
+        gen.append(` = <actions.`);
+        gen.append((action.actionClass).toString());
+        gen.append(`>action;`);
+        gen.eol();
+    }
     if (action.alterById) {
-        gen.append(`switch(action.stateId){`);
+        gen.append(`  switch(action.stateId){`);
         gen.eol();
         for (const alter of action.alters) {
-            gen.append(`case `);
+            gen.append(`    case `);
             gen.append((alter.id).toString());
             gen.append(`:`);
             gen.eol();
-            gen.append(`  return `);
+            gen.append(`      return `);
             gen.append((alter.code).toString());
             gen.append(`;`);
             gen.eol();
         }
-        gen.append(`default:`);
+        gen.append(`  default:`);
         gen.eol();
-        gen.append(`  return `);
+        gen.append(`    return `);
         gen.append((action.defaultAlter).toString());
         gen.append(`;`);
         gen.eol();
-        gen.append(`}`);
+        gen.append(`  }`);
         gen.eol();
     } else {
         gen.append(`return `);

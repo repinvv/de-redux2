@@ -9,6 +9,7 @@ export function prepareReduction(method: ParsedMethod, path: FilePath, imports: 
     name: method.name,
     filePath: path,
     parameters: method.parameters.map(parm => prepareField(parm, imports)),
-    returnType: prepareType(method.returnType, imports)
+    returnType: prepareType(method.returnType, imports),
+    castIndex: 0
   };
 }
